@@ -5,14 +5,14 @@ function testFcn(obj, ~, d, duty)
 output = 10*ones(d.Rate, 1);
 output(round(d.Rate*duty):end) = 0;
 
-data = readwrite(d, output);
+readwrite(d, output);
 
-t0 = obj.TasksExecuted*obj.Period;
+% t0 = obj.TasksExecuted*obj.Period;
 
-time = seconds(data.Time) + t0;
+% time = seconds(data.Time) + t0;
 
-hold on;
-plot(time, data.Variables);
+% hold on;
+% plot(time, data.Variables);
 
 end
 
